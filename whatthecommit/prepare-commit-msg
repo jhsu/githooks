@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cp $1 $1.bak
+
+curl -s http://whatthecommit.com/index.txt > $1
+cat $1.bak >> $1
