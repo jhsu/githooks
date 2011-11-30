@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+message=`cat "$1" | cowsay`
+echo "$message" > "$1"
