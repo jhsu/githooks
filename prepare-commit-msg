@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+hook=`ls ~/.githooks/**/* | while read x; do echo "\`expr $RANDOM % 1000\`:$x"; done | sort -n| sed 's/[0-9]*://' | head -1`
+echo "$hook"
+$hook $1 $2 $3
