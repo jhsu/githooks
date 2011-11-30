@@ -2,9 +2,6 @@
 
 echo $1
 if [[ "$2" == "message" ]]; then
-  cat "$1" > "$1.msg"
-  sed 's/\.*$/, bro./' "$1.msg" > "$1.msg"
-  cat "$1.msg" > "$1"
-  cat "$1"
-  # cat "$1" | sed 's/\.*$/, bro./' > "$1"
+  message=`sed 's/\.*$/, bro./' "$1"`
+  echo "$message" > "$1"
 fi
