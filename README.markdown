@@ -9,5 +9,6 @@ You don't need to read the source.
 
 ## Existing hooks
 
-* Bro
-* Whatthecommit
+* Bro - add ", bro" to the end of git commit messages
+* Whatthecommit - prepends commit message with a nice commit message from
+  whatthecommit.com
