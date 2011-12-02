@@ -16,5 +16,6 @@ and add the ~/.githooks/prepare-commit-msg to your .git/hooks/ for some lulz
 * Bro - add ", bro" to the end of git commit messages (depends on sed)
 * Cowsay - cowsay commit messages (depends on cowsay)
 * Fakecommit - "wait... didn't I just commit?"
+* Iamyou - pre and post-commit hooks that changes your name to a random author
 * Whatthecommit - prepends commit message with a nice commit message from
   whatthecommit.com (depends on curl)
