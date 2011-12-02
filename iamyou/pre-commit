@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+username=`git config --get user.name`
+randomname=`git log --format='%aN' | sort -u | while read x; do echo "\`expr $RANDOM % 1000\`:$x"; done | sort -n| sed 's/[0-9]*://' | head -1`
+echo "user.name changed to $username"
+
+echo $username > .git/username
+git config --global user.name "$username"

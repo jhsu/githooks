@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+username=`cat .git/username`
+git config --global user.name "$username"
+echo "user.name set back to $username"
+rm .git/username
