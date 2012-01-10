@@ -1,0 +1,4 @@
+#!/bin/bash
+
+message=`sed 's/\.*$/, bro./' "$1"`
+echo "$message" > "$1"
