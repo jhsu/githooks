@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 file =  ARGV[0]
 
 lines = File.readlines(ARGV[0])
