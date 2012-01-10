@@ -1,4 +1,15 @@
-#!/bin/bash
+file =  ARGV[0]
 
-message=`sed 's/\.*$/, bro./' "$1"`
-echo "$message" > "$1"
+lines = File.readlines(ARGV[0])
+last_line = 0
+lines = lines.each_with_index.map {|line, index|
+  unless line =~ /^#/ || line.empty?
+    last_line = index
+  end
+  line
+}
+
+lines[last_line].gsub!(/\.?\n/, ", bro.\n")
+
+File.open(file, 'w') {|f| lines.each {|l| puts l;  f.write(l) }}
+
