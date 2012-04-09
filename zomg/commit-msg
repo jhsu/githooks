@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+message = File.read(ARGV.first)
+
+new_message = message.split('').inject("") {|result,c| 
+  result += if result.length % 2 == 0
+    c.upcase
+  else
+    c.downcase
+  end
+  result 
+}
+File.open(ARGV.first, 'w') {|f| f.write(new_message)}
